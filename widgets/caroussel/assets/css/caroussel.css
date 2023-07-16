@@ -1,0 +1,83 @@
+.caroussel-braine .caroussel-braine-item {
+  display: grid;
+  align-items: center;
+}
+
+.caroussel-braine .caroussel-braine-item .caroussel-background {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.caroussel-braine .caroussel-braine-button {
+  position: relative;
+  display: inline-flex;
+  border: 1px solid;
+  padding: 10px
+}
+
+.caroussel-braine .caroussel-braine-button::before, .caroussel-braine .caroussel-braine-button::after {
+  content: "";
+  height: 2px;
+  width: 90%;
+  background: white;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 22;
+  transition: 1s all;
+}
+
+.caroussel-braine .caroussel-braine-button::before {
+  top: -2px;
+}
+
+.caroussel-braine .caroussel-braine-button::after {
+  bottom: -2px;
+}
+
+.caroussel-braine .caroussel-braine-button:hover:before, .caroussel-braine .caroussel-braine-button:hover:after {
+  width: 0%;
+  transition: .2s all;
+}
+
+/* Nav */
+
+.caroussel-buttons-container {
+  display: grid;
+  grid-template-columns: 1fr 50px 50px;
+  gap: 10px;
+  align-items: center;
+}
+
+.caroussel-buttons-container .caroussel-buttons-divisor {
+  width: 90%;
+  height: 1px;
+  background: #707070;
+}
+
+.caroussel-buttons-container .caroussel-braine-button-prev, .caroussel-buttons-container .caroussel-braine-button-next {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E5E5E5;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: 1s all;
+}
+
+.caroussel-buttons-container .caroussel-braine-button-prev:hover, .caroussel-buttons-container .caroussel-braine-button-next:hover {
+  transition: .2s all;
+  transform: scale(0.9);
+}
+
+@media screen and (min-width: 997px) {
+  .caroussel-braine .caroussel-braine-item {
+    grid-template-columns: 60% 40%;
+  }
+}

@@ -1,0 +1,49 @@
+.scroll-braine-container {
+  display: grid;
+  justify-content: center;
+}
+
+.scroll-braine-wrapper {
+  padding: 50% 0;
+  height: 0;
+  display: grid;
+  justify-content: center;
+}
+
+.scroll-braine {
+  transform: rotate(90deg) translate(0, -100%);
+  margin-top: -50%;
+  display: block;
+  transform-origin: top left;
+  white-space: nowrap;
+  width: 100px;
+}
+
+.scroll-braine::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.scroll-braine::before {
+  content: "";
+  width: 10%;
+  height: 2px;
+  display: block;
+  background: white;
+  background-image: blue;
+  animation: 2s infinite alternate scroll;
+}
+
+@keyframes scroll {
+  from {
+    width: 25%;
+  }
+  to {
+    width: 100%;
+  }
+}

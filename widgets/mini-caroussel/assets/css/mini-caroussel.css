@@ -1,0 +1,12 @@
+.mini-caroussel-braine .mini-caroussel-braine-item .mini-caroussel-background {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mini-caroussel-braine .mini-caroussel-braine-item .mini-caroussel-braine-content {
+  padding-left: 1em;
+  padding-right: 1em;
+  border-left: 2px solid;
+}
