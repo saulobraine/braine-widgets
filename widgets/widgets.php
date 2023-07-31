@@ -14,6 +14,7 @@ class Braine_Widgets_Loader {
     }
 
     public function include_widgets_files() {
+        require_once __DIR__ . '/accordion/accordion.php';
         require_once __DIR__ . '/slider/slider.php';
         require_once __DIR__ . '/mini-caroussel/mini-caroussel.php';
         require_once __DIR__ . '/caroussel/caroussel.php';
@@ -23,6 +24,7 @@ class Braine_Widgets_Loader {
     public function register_widgets() {
         $this->include_widgets_files();
 
+        \Elementor\Plugin::instance()->widgets_manager->register(new Widgets\Accordion_Braine());
         \Elementor\Plugin::instance()->widgets_manager->register(new Widgets\Slider_Braine());
         \Elementor\Plugin::instance()->widgets_manager->register(new Widgets\MiniCaroussel_Braine());
         \Elementor\Plugin::instance()->widgets_manager->register(new Widgets\Caroussel_Braine());
